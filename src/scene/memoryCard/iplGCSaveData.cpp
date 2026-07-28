@@ -8,12 +8,11 @@ namespace ipl {
 namespace scene {
 
 static const MemoryBase::AnmName scAnmName[5] = {
-    { "it_ObjCubeEdit_b_SaveDataIn.brk", "G_Data" },
-    // Read the next 8 addresses starting from 81610488 in Ghidra and add them here:
-    // { "...", "..." },
-    // { "...", "..." },
-    // { "...", "..." },
-    // { "...", "..." },
+    { "it_ObjCubeEdit_b_SaveDataIn.brk",       "G_Data"      },
+    { "it_ObjCubeEdit_b_SaveDataOut.brk",      "G_Data"      },
+    { "it_ObjCubeEdit_b_SaveDataFoucs.brk",    "G_Data"      },
+    { "it_ObjCubeEdit_b_SaveDataFoucsOut.brk", "G_Data"      },
+    { "it_ObjCubeEdit_b_SaveDataFlash.brk",    "G_DataFlash" }
 };
 
     GCSaveData::GCSaveData(EGG::Heap* heap, nand::LayoutFile* param_3, const char* p4, const char* p5, math::VEC3 param_6)
