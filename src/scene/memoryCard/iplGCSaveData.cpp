@@ -30,6 +30,8 @@ static const MemoryBase::AnmName scAnmName[5] = {
       // mpPaneManager->bindLayout(mpLayout->getLayout());
       // mpPaneManager->init(0);
     }
+
+    GCSaveData::~GCSaveData() {}
 } // namespace scene
 } // namespace ipl
 

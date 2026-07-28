@@ -11,6 +11,8 @@ namespace ipl {
             public:
             GCSaveData(EGG::Heap * heap, ipl::nand::LayoutFile * param_3, const char * param_4, const char* param_5, ipl::math::VEC3 param_6);
 
+            virtual ~GCSaveData();
+
             private:
 
             layout::Object* mpLayout; // 0x04

@@ -4,6 +4,6 @@
 namespace ipl {
     namespace scene {
 
-        MemoryBase::~MemoryBase() {}
+        MemoryBase::~MemoryBase();
     }
 }
