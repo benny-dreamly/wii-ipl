@@ -9,7 +9,13 @@ namespace scene {
     GCSaveData::GCSaveData(EGG::Heap* heap, LayoutFile* param_3, const char* p4, const char* p5, VEC3 param_6)
     : MemoryBase()
     {
-     
+      mField_0x38 = 0;
+      mpLayout = new layout::Object::Object(heap, param_3, param_4, param_5);
+
+      add_animation(&scAnmName, 5);
+      mpLayout->finishBinding();
+
+      mpEvent = new MemoryBaseEvent(this);
     }
 } // namespace scene
 } // namespace ipl
