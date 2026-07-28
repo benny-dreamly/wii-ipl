@@ -3,18 +3,21 @@
 
 #include "iplSceneHeader.h"
 #include "iplGCWindow.h"
+#include "iplMemoryCardBase.h"
 
 namespace ipl {
     namespace scene {
-        SCENE_CLASS(GCSaveData);
-        public:
-        GCSaveData(EGG::Heap * heap, nand::LayoutFile * param_3, const char * param_4, const char* param_5, math::VEC3 param_6);
+        class GCSaveData : public MemoryBase {
+            public:
+            GCSaveData(EGG::Heap * heap, nand::LayoutFile * param_3, const char * param_4, const char* param_5, math::VEC3 param_6);
 
-        private:
+            private:
 
-        layout::Object* mpLayout; // 0x04
-        MemoryBaseEvent* mpEvent; // 0x34
-        u32 mField_0x38; // 0x38
+            layout::Object* mpLayout; // 0x04
+            MemoryBaseEvent* mpEvent; // 0x34
+            u32 mField_0x38; // 0x38
+        };
+        
 
     }
 }

@@ -3,16 +3,26 @@
 #include "system/iplNand.h"
 #include "iplMath.h"
 
+
 namespace ipl {
 namespace scene {
 
-    GCSaveData::GCSaveData(EGG::Heap* heap, LayoutFile* param_3, const char* p4, const char* p5, VEC3 param_6)
+static const MemoryBase::AnmName scAnmName[5] = {
+    { "it_ObjCubeEdit_b_SaveDataIn.brk", "G_Data" },
+    // Read the next 8 addresses starting from 81610488 in Ghidra and add them here:
+    // { "...", "..." },
+    // { "...", "..." },
+    // { "...", "..." },
+    // { "...", "..." },
+};
+
+    GCSaveData::GCSaveData(EGG::Heap* heap, nand::LayoutFile* param_3, const char* p4, const char* p5, math::VEC3 param_6)
     : MemoryBase()
     {
       mField_0x38 = 0;
-      mpLayout = new layout::Object::Object(heap, param_3, param_4, param_5);
+      mpLayout = new layout::Object(heap, param_3, p4, p5);
 
-      add_animation(&scAnmName, 5);
+      add_animation(scAnmName, 5);
       mpLayout->finishBinding();
 
       mpEvent = new MemoryBaseEvent(this);

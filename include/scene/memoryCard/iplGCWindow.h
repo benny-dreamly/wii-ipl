@@ -2,14 +2,16 @@
 #define IPL_SCENE_GC_WINDOW_H
 
 #include "iplSceneHeader.h"
+#include "iplMemoryCardBase.h"
 
 namespace ipl {
-    namespace scene {
-        SCENE_CLASS(MemoryBase);
-        public:
-        MemoryBase();
+    namespace scene {        
 
-        SCENE_CLASS(MemoryBaseEvent);
-        MemoryBaseEvent(MemoryBase*);
+        SCENE_CLASS(MemoryBaseEvent){
+            public:
+            MemoryBaseEvent(MemoryBase*);
+        };
     }
 }
+
+#endif // IPL_SCENE_GC_WINDOW_H
