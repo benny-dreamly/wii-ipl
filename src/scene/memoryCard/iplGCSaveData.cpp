@@ -15,7 +15,7 @@ static const MemoryBase::AnmName scAnmName[5] = {
     { "it_ObjCubeEdit_b_SaveDataFlash.brk",    "G_DataFlash" }
 };
 
-    GCSaveData::GCSaveData(EGG::Heap* heap, nand::LayoutFile* param_3, const char* p4, const char* p5, math::VEC3 param_6)
+    GCSaveData::GCSaveData(EGG::Heap* heap, ipl::nand::LayoutFile* param_3, const char* p4, const char* p5, ipl::math::VEC3 param_6)
     : MemoryBase()
     {
       mField_0x38 = 0;
@@ -25,6 +25,10 @@ static const MemoryBase::AnmName scAnmName[5] = {
       mpLayout->finishBinding();
 
       mpEvent = new MemoryBaseEvent(this);
+
+      // mpPaneManager = new gui::PaneManager(mpEvent);
+      // mpPaneManager->bindLayout(mpLayout->getLayout());
+      // mpPaneManager->init(0);
     }
 } // namespace scene
 } // namespace ipl

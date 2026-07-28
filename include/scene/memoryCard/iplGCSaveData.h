@@ -9,11 +9,12 @@ namespace ipl {
     namespace scene {
         class GCSaveData : public MemoryBase {
             public:
-            GCSaveData(EGG::Heap * heap, nand::LayoutFile * param_3, const char * param_4, const char* param_5, math::VEC3 param_6);
+            GCSaveData(EGG::Heap * heap, ipl::nand::LayoutFile * param_3, const char * param_4, const char* param_5, ipl::math::VEC3 param_6);
 
             private:
 
             layout::Object* mpLayout; // 0x04
+            //gui::PaneManager* mpPaneManager;
             MemoryBaseEvent* mpEvent; // 0x34
             u32 mField_0x38; // 0x38
         };
